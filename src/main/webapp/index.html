@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
+<div class="todoLogo">
+    <h1>ToDo Application</h1>
+    <img src="/main/java/resources/static/images/todolist.JPG" alt="Mountain View">
+</div>
 <div>
     <div class="addItem">
-        <input type="text" id="taskDescription" name="Task Description" placeholder="Description Text">
-        <input type="text" id="taskStatus" name="Task Status" placeholder="Status Text">
+       Task: <input type="text" id="taskDescription" name="Task Description" placeholder="Description Text">
+       Status: <input type="text" id="taskStatus" name="Task Status" placeholder="Status Text">
         <button type="button" id="add" name="button" onclick="add()">Add</button>
     </div>
 
@@ -19,7 +23,6 @@
         <table id="todoTable">
             <tbody>
             <tr>
-                <th><td>Status</td></th>
             </tr>
             </tbody>
         </table>

@@ -39,10 +39,11 @@ function deleteTodo(id) {
 
 function updateTable(items) {
     $('#todoTable').empty();
-
+    document.getElementById('taskDescription').value = '';
+    document.getElementById('taskStatus').value = '';
     $.each(items, function( index, item ) {
         var table = document.getElementById('todoTable');
-        var button = "<button id=" + item.taskId + " onClick=deleteTask(" + item.taskId + ")>Delete<button>";
+        var button = "<button id=" + item.taskId + " onClick=deleteTask(" + item.taskId + ")>Delete</button>";
         $('#todoTable').append( "<tr><td>" + item.taskDescription + "</td><td>" + item.taskStatus + "</td><td>" +button+ "</tr>" );
     });
 }

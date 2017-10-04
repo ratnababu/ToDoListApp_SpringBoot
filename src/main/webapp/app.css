@@ -8,10 +8,22 @@
   margin: 50 0% 40 0%;
 }
 
+.todoLogo {
+padding: 10px;
+}
+
 .todoList {
   margin: 20px 55% 0 45%;
   width: 600px;
   text-align: center;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .todoRow {

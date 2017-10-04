@@ -1,0 +1,3 @@
+com\sample\dao\TaskRepository.class
+com\sample\model\Task.class
+com\sample\TodoController.class

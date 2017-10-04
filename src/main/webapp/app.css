@@ -1,0 +1,37 @@
+* {
+  text-align: center;
+}
+
+
+.addItem {
+  text-align: center;
+  margin: 50 0% 40 0%;
+}
+
+.todoList {
+  margin: 20px 55% 0 45%;
+  width: 600px;
+  text-align: center;
+}
+
+.todoRow {
+  color: #251e1e;
+  text-align: center;
+  background-color: rgba(118, 236, 10, 0.39);
+  border-spacing:1px;
+  padding: 0px 10px;
+}
+
+table, tbody, th, td {
+    border: 1px solid black;
+    background-color: pink;
+}
+
+#add {
+  background-color: #00ffd0;
+  color: red;
+}
+
+#delete {
+  background-color: red;
+}

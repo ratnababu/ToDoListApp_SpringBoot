@@ -37,17 +37,39 @@ function deleteTodo(id) {
     });
 }
 
+
+function editTodo(id) {
+var jsonObject = {taskId: id};
+
+    $.ajax({
+        method: 'UPDATE'
+        url: 'http://localhost:8080/add',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        data: JSON.stringify(jsonObject),
+        success: function(data) {
+            updateTable(data);
+        }
+    })
+}
+
 function updateTable(items) {
     $('#todoTable').empty();
     document.getElementById('taskDescription').value = '';
     document.getElementById('taskStatus').value = '';
     $.each(items, function( index, item ) {
         var table = document.getElementById('todoTable');
-        var button = "<button id=" + item.taskId + " onClick=deleteTask(" + item.taskId + ")>Delete</button>";
-        $('#todoTable').append( "<tr><td>" + item.taskDescription + "</td><td>" + item.taskStatus + "</td><td>" +button+ "</tr>" );
+        var delete_button = "<button id=" + item.taskId + " onClick=deleteTask(" + item.taskId + ")>Remove</button>";
+        var edit_button = "<button id=" + item.taskId + " onClick=editTask(" + item.taskId + ")>Edit</button>";
+        $('#todoTable').append( "<tr><td>" + item.taskDescription + "</td><td>" + item.taskStatus + "</td><td>" +delete_button+ "</td><td>" +edit_button+ "</tr>" );
     });
 }
 
 function deleteTask(id) {
     deleteTodo(id);
+}
+
+function editTask(id) {
+editTodo(id);
 }
